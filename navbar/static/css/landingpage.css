@@ -1,0 +1,44 @@
+      /* 3D Text Animation */
+      .welcome-heading {
+        font-size: 3rem;
+        perspective: 1000px;
+    }
+
+    .welcome-heading span {
+        display: inline-block;
+        transform: rotateX(0deg);
+        animation: rotate3dText 2s ease-in-out forwards;
+    }
+
+    @keyframes rotate3dText {
+        0% {
+            transform: rotateX(-90deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+    }
+
+    /* 3D Image Hover Animation */
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+    .gallery img:hover {
+        transform: rotateY(20deg) translateZ(30px) scale(1.1);
+    }
+
+
+    /* AOS Animations (Enhanced with 3D effects) */
+    [data-aos][data-aos^="zoom-in"] {
+        perspective: 1000px;
+    }
+
+    

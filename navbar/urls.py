@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import homepage
+from .views import landingpage,homepage
 
 app_name = "navbar"
 urlpatterns = [
-    path("", homepage, name='homepage'),
+    path("", landingpage, name='landingpage'),
+    path("/homepage", homepage, name='homepage'),
 ]
